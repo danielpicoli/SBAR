@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>SBAR / Checklist de Transporte Seguro</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="logo_hapvida.png" alt="Logo Hapvida" class="logo">
+    <h1>SBAR / CHECKLIST DE TRANSPORTE SEGURO</h1>
+
+    <form id="sbar-form">
+      <label>Nome completo: <input type="text" name="nome_completo" required></label>
+      <label>Data de nascimento: <input type="date" name="data_nascimento" required></label>
+      <label>Data de hoje: <input type="text" name="data_hoje" id="data_hoje" readonly></label>
+      <label>Hora atual: <input type="text" name="hora" id="hora" readonly></label>
+      <label>Unidade de origem: <input type="text" name="unidade_origem"></label>
+      <label>Unidade de destino: <input type="text" name="unidade_destino"></label>
+      <label>Motivo da transferência: <textarea name="motivo_transferencia"></textarea></label>
+      <label>Diagnóstico(s): <textarea name="diagnostico"></textarea></label>
+      <label>Medicamentos em uso: <textarea name="medicamentos"></textarea></label>
+      <label>SpO₂: <input type="text" name="spo2"></label>
+      <label>PA: <input type="text" name="pa"></label>
+      <label>FC: <input type="text" name="fc"></label>
+      <label>FR: <input type="text" name="fr"></label>
+      <label>Temperatura (TAX): <input type="text" name="tax"></label>
+      <label>Dor: <input type="text" name="dor"></label>
+      <label>Avaliação: <textarea name="avaliacao"></textarea></label>
+      <label>Recomendações: <textarea name="recomendacoes"></textarea></label>
+
+      <button type="submit" id="generate-pdf">GERAR PDF</button>
+    </form>
+
+    <footer>
+      Desenvolvido por Dr. Daniel Picoli - Hospital Family (Hapvida)
+    </footer>
+  </div>
+
+  <script src="./pdf-lib.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
